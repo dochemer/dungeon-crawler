@@ -1,10 +1,10 @@
 [gd_scene load_steps=90 format=3 uid="uid://cdphgjtu37ht3"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_ho5et"]
-[ext_resource type="Texture2D" uid="uid://42o526syw2xg" path="res://Blue Asha All anims.png" id="2_44rpp"]
-[ext_resource type="Texture2D" uid="uid://bs7molhc77b65" path="res://assets/Animations/Blue attack 1 48x48.png" id="2_l8dam"]
-[ext_resource type="Texture2D" uid="uid://c6lbkj2c8o34f" path="res://Blue Asha Idle 32x32.png" id="3_anhua"]
-[ext_resource type="Texture2D" uid="uid://xdscd1u0b75e" path="res://Blue Asha Walk 32x32.png" id="4_evdsa"]
+[ext_resource type="Script" path="res://src/scripts/player.gd" id="1_ho5et"]
+[ext_resource type="Texture2D" uid="uid://dw8d7ldcguntm" path="res://assets/animations/Blue Asha All anims.png" id="2_44rpp"]
+[ext_resource type="Texture2D" uid="uid://ck0rga8awc0c5" path="res://assets/animations/Blue attack 1 48x48.png" id="2_l8dam"]
+[ext_resource type="Texture2D" uid="uid://bd0dhh3qi0gbx" path="res://assets/animations/Blue Asha Idle 32x32.png" id="3_anhua"]
+[ext_resource type="Texture2D" uid="uid://c6wtr15iitmd8" path="res://assets/animations/Blue Asha Walk 32x32.png" id="4_evdsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4uwg5"]
 size = Vector2(20, 26)
