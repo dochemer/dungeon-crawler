@@ -1,0 +1,108 @@
+[gd_scene load_steps=13 format=3 uid="uid://c7g777qi464t8"]
+
+[ext_resource type="Texture2D" uid="uid://h5du5yg8n203" path="res://assets/tiles/monsters_1.png" id="1_effnw"]
+[ext_resource type="Script" path="res://Scripts/monster.gd" id="1_fxp3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmdkg"]
+size = Vector2(18, 20.6667)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e24rx"]
+atlas = ExtResource("1_effnw")
+region = Rect2(14, 220, 24, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q2e1"]
+atlas = ExtResource("1_effnw")
+region = Rect2(62, 220, 24, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf82f"]
+atlas = ExtResource("1_effnw")
+region = Rect2(110, 220, 24, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6it5x"]
+atlas = ExtResource("1_effnw")
+region = Rect2(0, 102, 48, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0a10"]
+atlas = ExtResource("1_effnw")
+region = Rect2(48, 102, 48, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpgj4"]
+atlas = ExtResource("1_effnw")
+region = Rect2(96, 102, 48, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpxqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e24rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q2e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf82f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6it5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0a10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpgj4")
+}],
+"loop": true,
+"name": &"move right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mk4rm"]
+radius = 27.0185
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7mji"]
+bg_color = Color(0.875882, 0, 0.224683, 1)
+
+[node name="monster" type="CharacterBody2D" groups=["Monster"]]
+collision_mask = 3
+script = ExtResource("1_fxp3s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.66667, -1)
+shape = SubResource("RectangleShape2D_jmdkg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vpxqn")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.430539
+
+[node name="MeleeZone" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeZone"]
+shape = SubResource("CircleShape2D_mk4rm")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -8.66667
+offset_top = -38.0
+offset_right = 11.3333
+offset_bottom = -33.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_o7mji")
+allow_lesser = true
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 50.0
+avoidance_enabled = true
+radius = 32.0
+debug_enabled = true
+
+[connection signal="body_entered" from="MeleeZone" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="MeleeZone" to="." method="_on_player_detection_body_exited"]

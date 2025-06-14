@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://qqnsjbdycydv"]
+
+[ext_resource type="Script" path="res://Scripts/battle_controller.gd" id="1_tso3k"]
+[ext_resource type="PackedScene" uid="uid://cdphgjtu37ht3" path="res://scenes/Players/player.tscn" id="2_5nfhx"]
+[ext_resource type="PackedScene" uid="uid://c7g777qi464t8" path="res://scenes/Monsters/monster.tscn" id="3_6iuwx"]
+[ext_resource type="Resource" uid="uid://b2txnt2jjxs25" path="res://Resources/zombie.tres" id="4_g2jjx"]
+[ext_resource type="Resource" uid="uid://cwb35emfvqhib" path="res://Resources/ghost.tres" id="5_fvprc"]
+[ext_resource type="Resource" uid="uid://daw5drl8irvfl" path="res://Resources/orc.tres" id="6_ykl7y"]
+
+[node name="BattleController" type="Node" node_paths=PackedStringArray("player", "enemies")]
+script = ExtResource("1_tso3k")
+player = NodePath("player")
+enemies = [NodePath("monster"), NodePath("monster2"), NodePath("monster3"), NodePath("monster4"), NodePath("monster5")]
+
+[node name="player" parent="." instance=ExtResource("2_5nfhx")]
+position = Vector2(159, 50)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(494, 89)
+
+[node name="monster" parent="." node_paths=PackedStringArray("zone") instance=ExtResource("3_6iuwx")]
+position = Vector2(456, 238)
+resource = ExtResource("4_g2jjx")
+zone = NodePath("../Area2D")
+
+[node name="monster2" parent="." node_paths=PackedStringArray("zone") instance=ExtResource("3_6iuwx")]
+position = Vector2(591, 76)
+resource = ExtResource("5_fvprc")
+zone = NodePath("../Area2D")
+
+[node name="monster3" parent="." node_paths=PackedStringArray("zone") instance=ExtResource("3_6iuwx")]
+position = Vector2(803, 159)
+resource = ExtResource("5_fvprc")
+zone = NodePath("../Area2D")
+
+[node name="monster4" parent="." instance=ExtResource("3_6iuwx")]
+position = Vector2(82, 247)
+resource = ExtResource("6_ykl7y")
+
+[node name="monster5" parent="." instance=ExtResource("3_6iuwx")]
+position = Vector2(247, 159)
+resource = ExtResource("6_ykl7y")

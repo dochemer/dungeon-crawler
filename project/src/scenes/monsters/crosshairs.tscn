@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://il7ilpqtvkxg"]
+
+[ext_resource type="Script" path="res://Scripts/crosshairs.gd" id="1_dqclw"]
+[ext_resource type="Texture2D" uid="uid://csj3rxk01w8xl" path="res://crosshairs_tilesheet_black.png" id="2_3rw2l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqg5a"]
+atlas = ExtResource("2_3rw2l")
+region = Rect2(619, 68, 68, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_an0i6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqg5a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Crosshairs" type="Node2D"]
+script = ExtResource("1_dqclw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_an0i6")
