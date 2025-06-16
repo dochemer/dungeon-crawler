@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bcjjkolo1v1ev"]
 
-[ext_resource type="Script" path="res://Scripts/fog_of_war.gd" id="1_skci7"]
+[ext_resource type="Script" path="res://src/scripts/fog_of_war.gd" id="1_skci7"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g8ccj"]
 blend_mode = 3

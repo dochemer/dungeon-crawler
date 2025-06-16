@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="MonsterResource" load_steps=91 format=3 uid="uid://daw5drl8irvfl"]
 
-[ext_resource type="Script" path="res://Scripts/monsterResource.gd" id="1_cmde2"]
-[ext_resource type="Texture2D" uid="uid://d21nrb0lj7ypd" path="res://assets/Sprites/Blue Goblin Thrower/Blue_goblin_death.png" id="2_enclu"]
-[ext_resource type="Texture2D" uid="uid://cypbclnofcqe6" path="res://assets/Sprites/Blue Goblin Thrower/Blue_goblin_idle.png" id="2_ig2fb"]
-[ext_resource type="Texture2D" uid="uid://cgjybd7ddlf8r" path="res://assets/Sprites/Blue Goblin Thrower/Blue_goblin_attack.png" id="2_krkho"]
-[ext_resource type="Texture2D" uid="uid://wqsnvxjnk611" path="res://assets/Sprites/Blue Goblin Thrower/Blue_goblin_move.png" id="3_klhmw"]
+[ext_resource type="Script" path="res://src/scripts/monsterResource.gd" id="1_cmde2"]
+[ext_resource type="Texture2D" uid="uid://d21nrb0lj7ypd" path="res://assets/animations/monsters/Blue Goblin Thrower/Blue_goblin_death.png" id="2_enclu"]
+[ext_resource type="Texture2D" uid="uid://cypbclnofcqe6" path="res://assets/animations/monsters/Blue Goblin Thrower/Blue_goblin_idle.png" id="2_ig2fb"]
+[ext_resource type="Texture2D" uid="uid://cgjybd7ddlf8r" path="res://assets/animations/monsters/Blue Goblin Thrower/Blue_goblin_attack.png" id="2_krkho"]
+[ext_resource type="Texture2D" uid="uid://wqsnvxjnk611" path="res://assets/animations/monsters/Blue Goblin Thrower/Blue_goblin_move.png" id="3_klhmw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64kiq"]
 atlas = ExtResource("2_krkho")

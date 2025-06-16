@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MonsterResource" load_steps=19 format=3 uid="uid://b2txnt2jjxs25"]
 
-[ext_resource type="Script" path="res://Scripts/monsterResource.gd" id="1_i7g6a"]
-[ext_resource type="Texture2D" uid="uid://h5du5yg8n203" path="res://assets/tiles/monsters_1.png" id="2_cwi1c"]
+[ext_resource type="Script" path="res://src/scripts/monsterResource.gd" id="1_i7g6a"]
+[ext_resource type="Texture2D" uid="uid://clemxx7ism0ow" path="res://assets/animations/monsters/monsters_1.png" id="2_cwi1c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xga0f"]
 atlas = ExtResource("2_cwi1c")

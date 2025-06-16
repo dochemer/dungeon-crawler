@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://c7g777qi464t8"]
 
-[ext_resource type="Texture2D" uid="uid://h5du5yg8n203" path="res://assets/tiles/monsters_1.png" id="1_effnw"]
-[ext_resource type="Script" path="res://Scripts/monster.gd" id="1_fxp3s"]
+[ext_resource type="Texture2D" uid="uid://clemxx7ism0ow" path="res://assets/animations/monsters/monsters_1.png" id="1_effnw"]
+[ext_resource type="Script" path="res://src/scripts/monster.gd" id="1_fxp3s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmdkg"]
 size = Vector2(18, 20.6667)

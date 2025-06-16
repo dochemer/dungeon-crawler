@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://il7ilpqtvkxg"]
 
-[ext_resource type="Script" path="res://Scripts/crosshairs.gd" id="1_dqclw"]
-[ext_resource type="Texture2D" uid="uid://csj3rxk01w8xl" path="res://crosshairs_tilesheet_black.png" id="2_3rw2l"]
+[ext_resource type="Script" path="res://src/scripts/crosshairs.gd" id="1_dqclw"]
+[ext_resource type="Texture2D" uid="uid://dqo1xnnq82qd7" path="res://assets/sprites/crosshairs_tilesheet_black.png" id="2_3rw2l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cqg5a"]
 atlas = ExtResource("2_3rw2l")
