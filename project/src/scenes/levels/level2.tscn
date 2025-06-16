@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cadg1krfkjrrg"]
+[gd_scene load_steps=23 format=4 uid="uid://cadg1krfkjrrg"]
 
 [ext_resource type="Texture2D" uid="uid://dgqtf8qeqnr3i" path="res://assets/tilesets/TilesetFloor.png" id="2_uj5kc"]
 [ext_resource type="Texture2D" uid="uid://c2wnkn1jq0exw" path="res://assets/tilesets/TilesetHole.png" id="3_hcthh"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://ftvdvfxkjphr" path="res://assets/tilesets/free_ground_autotile_2.png" id="9_sawor"]
 [ext_resource type="Texture2D" uid="uid://f68epncf57a8" path="res://assets/tilesets/free_template_ground.png" id="10_2qioa"]
 [ext_resource type="Texture2D" uid="uid://dfk6yplrmdcub" path="res://assets/tilesets/atlas.png" id="11_0mq7i"]
-[ext_resource type="Script" path="res://src/scripts/fog_of_war.gd" id="12_n6pd1"]
 [ext_resource type="PackedScene" uid="uid://bcjjkolo1v1ev" path="res://src/scenes/misc/fog_of_war.tscn" id="12_p35qo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xf3y"]
@@ -4027,4 +4026,3 @@ tile_map_data = PackedByteArray("AABPADEABQAAAAUAAABPADAABQAAAAUAAABPAC8ABQAAAAU
 tile_set = SubResource("TileSet_b1l63")
 
 [node name="FogOfWar" parent="." instance=ExtResource("12_p35qo")]
-script = ExtResource("12_n6pd1")

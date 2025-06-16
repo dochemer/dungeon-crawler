@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://j0ny0wuf0l0l"]
 
-[ext_resource type="Script" path="res://Scripts/battle_zone.gd" id="1_utwlg"]
+[ext_resource type="Script" path="res://src/scripts/battle_zone.gd" id="1_utwlg"]
 
 [node name="BattleZone" type="Area2D" groups=["Zone"]]
 collision_mask = 3

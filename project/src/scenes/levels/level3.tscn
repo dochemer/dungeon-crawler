@@ -18,10 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://dfk6yplrmdcub" path="res://assets/tilesets/atlas.png" id="11_elqg6"]
 [ext_resource type="PackedScene" uid="uid://b6iod66qgy7vp" path="res://src/scenes/objects/coin.tscn" id="16_quni2"]
 [ext_resource type="PackedScene" uid="uid://c7g777qi464t8" path="res://src/scenes/monsters/monster.tscn" id="17_vk8n4"]
-[ext_resource type="Resource" uid="uid://b2txnt2jjxs25" path="res://src/resources/zombie.tres" id="19_y55vp"]
+[ext_resource type="Resource" uid="uid://cwb35emfvqhib" path="res://src/resources/ghost.tres" id="20_rhpn6"]
 [ext_resource type="PackedScene" uid="uid://j0ny0wuf0l0l" path="res://src/scenes/controllers/battle_zone.tscn" id="20_xnyk3"]
-[ext_resource type="Resource" uid="uid://daw5drl8irvfl" path="res://src/resources/orc.tres" id="21_4ktgo"]
-[ext_resource type="Resource" uid="uid://cwb35emfvqhib" path="res://src/resources/ghost.tres" id="22_gfygr"]
+[ext_resource type="Resource" uid="uid://daw5drl8irvfl" path="res://src/resources/orc.tres" id="21_h5diq"]
+[ext_resource type="Resource" uid="uid://b2txnt2jjxs25" path="res://src/resources/zombie.tres" id="22_6n0yf"]
 [ext_resource type="PackedScene" uid="uid://bcjjkolo1v1ev" path="res://src/scenes/misc/fog_of_war.tscn" id="23_g6tt8"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_gnuwm"]
@@ -4535,68 +4535,78 @@ shape = SubResource("RectangleShape2D_xq5wg")
 
 [node name="coin" parent="." instance=ExtResource("16_quni2")]
 position = Vector2(668, 1058)
+script = null
 
 [node name="coin2" parent="." instance=ExtResource("16_quni2")]
 position = Vector2(1702, 685)
+script = null
 
 [node name="coin3" parent="." instance=ExtResource("16_quni2")]
 position = Vector2(1403, 1440)
+script = null
 
 [node name="zombie3" parent="." instance=ExtResource("17_vk8n4")]
 position = Vector2(1643, 687)
-resource = ExtResource("19_y55vp")
+script = null
 
 [node name="ZoneHolder" type="Node2D" parent="."]
 
-[node name="BattleZone" parent="ZoneHolder" node_paths=PackedStringArray("collision_poly") instance=ExtResource("20_xnyk3")]
-collision_poly = NodePath("CollisionPolygon2D2")
+[node name="BattleZone" parent="ZoneHolder" instance=ExtResource("20_xnyk3")]
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ZoneHolder/BattleZone"]
 position = Vector2(488, 131)
 polygon = PackedVector2Array(-420, -62, -421, 64, -326, 64, -326, 120, -259, 122, -260, 224, -422, 224, -420, 635, -388, 642, -388, 768, -202, 770, -203, 485, -235, 485, -240, 413, 176, 410, 178, 198, 149, 202, 149, 66, 240, 66, 240, -70, -73, -67, -70, 32, -202, 32, -195, -65)
 
-[node name="BattleZone2" parent="ZoneHolder" node_paths=PackedStringArray("collision_poly") instance=ExtResource("20_xnyk3")]
-collision_poly = NodePath("CollisionPolygon2D2")
+[node name="BattleZone2" parent="ZoneHolder" instance=ExtResource("20_xnyk3")]
+script = null
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ZoneHolder/BattleZone2"]
 position = Vector2(1295, 160)
 polygon = PackedVector2Array(-327, 8, -335, 104, -456, 104, -458, 247, -430, 255, -425, 618, -388, 642, -388, 768, -202, 770, -60, 769, 13, 477, 16, 333, -52, 260, -55, 13)
 
-[node name="BattleZone3" parent="ZoneHolder" node_paths=PackedStringArray("collision_poly") instance=ExtResource("20_xnyk3")]
-collision_poly = NodePath("CollisionPolygon2D2")
+[node name="BattleZone3" parent="ZoneHolder" instance=ExtResource("20_xnyk3")]
+script = null
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ZoneHolder/BattleZone3"]
 position = Vector2(2159, 652)
 polygon = PackedVector2Array(-273, -324, -270, 187, -523.352, 182.678, -616, 180, -619, -321)
 
 [node name="BattleZone4" parent="ZoneHolder" instance=ExtResource("20_xnyk3")]
+script = null
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ZoneHolder/BattleZone4"]
 position = Vector2(721, 902)
 polygon = PackedVector2Array(-370, -134, -370, 61, -297, 64, -305, 129, -172, 123, -172, 279, 14, 279, 48, 157, 48, 86, 173, 86, 173, -134)
 
-[node name="monster" parent="." instance=ExtResource("17_vk8n4")]
+[node name="monster" parent="." node_paths=PackedStringArray("zone") instance=ExtResource("17_vk8n4")]
 position = Vector2(393, 308)
-resource = ExtResource("22_gfygr")
+resource = ExtResource("20_rhpn6")
+zone = NodePath("../ZoneHolder/BattleZone")
 
-[node name="monster2" parent="." instance=ExtResource("17_vk8n4")]
+[node name="monster2" parent="." node_paths=PackedStringArray("zone") instance=ExtResource("17_vk8n4")]
 position = Vector2(1059, 570)
-resource = ExtResource("21_4ktgo")
+resource = ExtResource("20_rhpn6")
+zone = NodePath("../ZoneHolder/BattleZone")
 
 [node name="monster3" parent="." instance=ExtResource("17_vk8n4")]
 position = Vector2(571, 454)
-resource = ExtResource("21_4ktgo")
+resource = ExtResource("21_h5diq")
 
 [node name="monster4" parent="." instance=ExtResource("17_vk8n4")]
 position = Vector2(151, 652)
-resource = ExtResource("21_4ktgo")
+resource = ExtResource("22_6n0yf")
 
 [node name="monster5" parent="." instance=ExtResource("17_vk8n4")]
 position = Vector2(600, 990)
-resource = ExtResource("21_4ktgo")
+resource = ExtResource("20_rhpn6")
 
-[node name="FogOfWar" parent="." node_paths=PackedStringArray("player") instance=ExtResource("23_g6tt8")]
-player = NodePath("../player")
+[node name="FogOfWar" parent="." instance=ExtResource("23_g6tt8")]
+script = null
+
+[node name="monster6" parent="." node_paths=PackedStringArray("zone") instance=ExtResource("17_vk8n4")]
+position = Vector2(310, 283)
+resource = ExtResource("21_h5diq")
+zone = NodePath("../ZoneHolder/BattleZone")
 
 [connection signal="body_entered" from="NavigationRegion2D/Layer Holder/TileMapLayer3/bridge_crossing" to="player" method="_on_bridge_crossing_body_entered"]
 [connection signal="body_exited" from="NavigationRegion2D/Layer Holder/TileMapLayer3/bridge_crossing" to="player" method="_on_bridge_crossing_body_exited"]

@@ -108,7 +108,7 @@ func _physics_process(delta: float) -> void:
 		if current_combat_state == combat_state.INITMOVE:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.y = move_toward(velocity.y, 0, SPEED)
-			cross_hairs = load("res://Scenes/Monsters/crosshairs.tscn").instantiate()
+			cross_hairs = load("res://src/scenes/monsters/crosshairs.tscn").instantiate()
 			get_tree().current_scene.add_child(cross_hairs)
 			cross_hairs.visible = true
 			cross_hairs.aim_completed.connect(_on_aim_completed)

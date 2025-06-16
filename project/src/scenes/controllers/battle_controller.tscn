@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://qqnsjbdycydv"]
 
-[ext_resource type="Script" path="res://Scripts/battle_controller.gd" id="1_tso3k"]
-[ext_resource type="PackedScene" uid="uid://cdphgjtu37ht3" path="res://scenes/Players/player.tscn" id="2_5nfhx"]
-[ext_resource type="PackedScene" uid="uid://c7g777qi464t8" path="res://scenes/Monsters/monster.tscn" id="3_6iuwx"]
-[ext_resource type="Resource" uid="uid://b2txnt2jjxs25" path="res://Resources/zombie.tres" id="4_g2jjx"]
-[ext_resource type="Resource" uid="uid://cwb35emfvqhib" path="res://Resources/ghost.tres" id="5_fvprc"]
-[ext_resource type="Resource" uid="uid://daw5drl8irvfl" path="res://Resources/orc.tres" id="6_ykl7y"]
+[ext_resource type="Script" path="res://src/scripts/battle_controller.gd" id="1_tso3k"]
+[ext_resource type="PackedScene" uid="uid://cdphgjtu37ht3" path="res://src/scenes/players/player.tscn" id="2_5nfhx"]
+[ext_resource type="PackedScene" uid="uid://c7g777qi464t8" path="res://src/scenes/monsters/monster.tscn" id="3_6iuwx"]
+[ext_resource type="Resource" uid="uid://b2txnt2jjxs25" path="res://src/resources/zombie.tres" id="4_g2jjx"]
+[ext_resource type="Resource" uid="uid://cwb35emfvqhib" path="res://src/resources/ghost.tres" id="5_fvprc"]
+[ext_resource type="Resource" uid="uid://daw5drl8irvfl" path="res://src/resources/orc.tres" id="6_ykl7y"]
 
 [node name="BattleController" type="Node" node_paths=PackedStringArray("player", "enemies")]
 script = ExtResource("1_tso3k")
