@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcjjkolo1v1ev"]
+
+[ext_resource type="Script" path="res://Scripts/fog_of_war.gd" id="1_skci7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g8ccj"]
+blend_mode = 3
+
+[node name="FogOfWar" type="Node2D"]
+visibility_layer = 2
+script = ExtResource("1_skci7")
+
+[node name="Fog" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_g8ccj")
+centered = false

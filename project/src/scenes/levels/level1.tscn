@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=4 uid="uid://ctllljpm6y0cd"]
 
-[ext_resource type="Texture2D" uid="uid://c3hycvxqlncsw" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="1_xrq15"]
-[ext_resource type="Texture2D" uid="uid://bjpluy6ejgaln" path="res://assets/Backgrounds/Tilesets/TilesetHole.png" id="2_1uaav"]
-[ext_resource type="Texture2D" uid="uid://bl42ulnbc76i4" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="3_sd16r"]
-[ext_resource type="Texture2D" uid="uid://ch2qkl8l5uv8k" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="4_vwn2s"]
-[ext_resource type="Texture2D" uid="uid://c0hjnechuvi2n" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="5_fh2lm"]
-[ext_resource type="Texture2D" uid="uid://b4yntbdbh7l86" path="res://assets/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="6_y15hk"]
-[ext_resource type="Texture2D" uid="uid://doo8gt81eov0e" path="res://assets/tiles/Set 1.0.png" id="7_ivll6"]
-[ext_resource type="PackedScene" uid="uid://cdphgjtu37ht3" path="res://scenes/Players/player.tscn" id="8_s0gjf"]
+[ext_resource type="Texture2D" uid="uid://dgqtf8qeqnr3i" path="res://assets/tilesets/TilesetFloor.png" id="1_xrq15"]
+[ext_resource type="Texture2D" uid="uid://c2wnkn1jq0exw" path="res://assets/tilesets/TilesetHole.png" id="2_1uaav"]
+[ext_resource type="Texture2D" uid="uid://dqgmksrxlgpf2" path="res://assets/tilesets/TilesetHouse.png" id="3_sd16r"]
+[ext_resource type="Texture2D" uid="uid://gqfh6fljy3ab" path="res://assets/tilesets/TilesetInterior.png" id="4_vwn2s"]
+[ext_resource type="Texture2D" uid="uid://c1uwwxwr83ap8" path="res://assets/tilesets/TilesetInteriorFloor.png" id="5_fh2lm"]
+[ext_resource type="Texture2D" uid="uid://fvo6mc6su8ma" path="res://assets/tilesets/TilesetWallSimple.png" id="6_y15hk"]
+[ext_resource type="Texture2D" uid="uid://dpieea2xfb1eb" path="res://assets/tilesets/Set 1.0.png" id="7_ivll6"]
+[ext_resource type="PackedScene" uid="uid://cdphgjtu37ht3" path="res://src/scenes/players/player.tscn" id="8_s0gjf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfin1"]
 texture = ExtResource("1_xrq15")
